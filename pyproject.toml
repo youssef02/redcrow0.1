@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "redcrow"
+version = "0.1.0"
+description = "RedCrow using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.67.1,<1.0.0" }
+
+
+[tool.poetry.scripts]
+redcrow = "redcrow.main:run"
+run_crew = "redcrow.main:run"
+train = "redcrow.main:train"
+replay = "redcrow.main:replay"
+test = "redcrow.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

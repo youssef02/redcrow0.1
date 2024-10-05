@@ -1,0 +1,35 @@
+webkit_research_task:
+  description: >
+    Conduct an in-depth investigation of potential vulnerabilities in WebKit, focusing on JavaScriptCore. 
+    Your goal is to identify areas of the codebase that are prone to memory corruption or other exploitable weaknesses.
+    Ensure your research is relevant to 2024, including the latest patches, trends in WebKit exploits, and publicly known vulnerabilities.
+  expected_output: >
+    A list of 10 key areas or functions in JavaScriptCore/WebKit where vulnerabilities might exist, with explanations for each.
+  agent: vulnerability_researcher
+
+exploit_development_task:
+  description: >
+    Based on the vulnerabilities identified by the research team, develop proof-of-concept (PoC) exploits. 
+    Focus on demonstrating reliable remote code execution via WebKit vulnerabilities. 
+    Include methods to bypass browser isolation techniques if possible.
+  expected_output: >
+    One or more PoC exploits in a testable format (code snippets and setup instructions) that demonstrate code execution in a WebKit environment.
+  agent: exploit_developer
+
+red_team_simulation_task:
+  description: >
+    Using the provided PoC exploits, simulate real-world attack scenarios targeting WebKit browsers. 
+    Focus on bypassing browser isolation mechanisms and gaining unauthorized access to system resources.
+  expected_output: >
+    A detailed report of the simulated attack scenarios, including attack vectors used, challenges encountered, and the final outcome. 
+    The report should include recommendations for strengthening defenses.
+  agent: red_team_operator
+
+vulnerability_reporting_task:
+  description: >
+    Collect all the findings from the research, exploit development, and red team simulation tasks. 
+    Compile a detailed report summarizing the vulnerabilities, exploitation methods, and potential mitigations.
+  expected_output: >
+    A comprehensive report in markdown format, with each vulnerability documented in its own section. 
+    The report should include PoC code snippets, attack vectors, and mitigation strategies.
+  agent: reporting_analyst
